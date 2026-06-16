@@ -1,0 +1,672 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-lang="pt">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Clauâne Carolino — Linguista, Pesquisadora de Changana</title>
+<meta name="description" content="Clauâne Pâmela Leal Dias Carolino — Doutoranda em Linguística (UFMG), pesquisadora da língua Changana, Moçambique.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ink: #1A1410;
+    --night: #1B3A3F;
+    --night-soft: #285057;
+    --clay: #C1622D;
+    --clay-soft: #E2895A;
+    --sand: #F2E8D8;
+    --sand-deep: #E8D8BE;
+    --gold: #D9A552;
+    --paper: #FBF7EF;
+    --line: rgba(26,20,16,0.12);
+    --max: 1080px;
+  }
+
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0;
+    background: var(--paper);
+    color: var(--ink);
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 17px;
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  h1, h2, h3, .display {
+    font-family: 'Fraunces', serif;
+    font-weight: 500;
+    letter-spacing: -0.01em;
+    color: var(--ink);
+  }
+
+  a { color: var(--clay); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  a:focus-visible, button:focus-visible { outline: 2px solid var(--clay); outline-offset: 3px; }
+
+  img { max-width: 100%; display: block; }
+
+  .wrap { max-width: var(--max); margin: 0 auto; padding: 0 28px; }
+
+  /* ---------- Nav ---------- */
+  header.site-nav {
+    position: sticky; top: 0; z-index: 50;
+    background: rgba(251,247,239,0.92);
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid var(--line);
+  }
+  .nav-inner {
+    max-width: var(--max); margin: 0 auto; padding: 16px 28px;
+    display: flex; align-items: center; justify-content: space-between;
+    gap: 16px;
+  }
+  .nav-name {
+    font-family: 'Fraunces', serif; font-size: 19px; font-weight: 500;
+    color: var(--ink); white-space: nowrap;
+  }
+  .nav-name span { color: var(--clay); }
+  nav.links { display: flex; gap: 26px; flex-wrap: wrap; }
+  nav.links a {
+    color: var(--ink); font-size: 14.5px; font-weight: 600;
+    letter-spacing: 0.02em; text-transform: uppercase;
+  }
+  nav.links a:hover { color: var(--clay); text-decoration: none; }
+  .nav-right { display: flex; align-items: center; gap: 18px; }
+
+  .lang-toggle {
+    display: flex; border: 1px solid var(--ink); border-radius: 20px; overflow: hidden;
+    font-size: 13px; font-weight: 700; letter-spacing: 0.04em;
+  }
+  .lang-toggle button {
+    background: none; border: none; padding: 6px 14px; cursor: pointer;
+    color: var(--ink); font-family: inherit; font-size: inherit; font-weight: inherit;
+  }
+  .lang-toggle button.active { background: var(--ink); color: var(--paper); }
+
+  .nav-toggle-mobile { display: none; background: none; border: none; cursor: pointer; padding: 4px; }
+  .nav-toggle-mobile svg { width: 26px; height: 26px; }
+
+  /* ---------- Hero ---------- */
+  .hero {
+    background: linear-gradient(160deg, var(--night) 0%, var(--night-soft) 60%, var(--clay) 130%);
+    color: var(--sand);
+    padding: 86px 0 72px;
+    position: relative;
+    overflow: hidden;
+  }
+  .hero::after {
+    content: "";
+    position: absolute; inset: 0;
+    background-image: radial-gradient(circle at 85% 20%, rgba(217,165,82,0.18), transparent 45%);
+    pointer-events: none;
+  }
+  .hero-grid {
+    display: grid; grid-template-columns: 1.3fr 0.9fr; gap: 48px; align-items: center;
+    position: relative; z-index: 1;
+  }
+  .hero-eyebrow {
+    font-size: 13.5px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase;
+    color: var(--gold); margin-bottom: 18px;
+  }
+  .hero h1 {
+    color: #fff; font-size: clamp(34px, 5vw, 52px); line-height: 1.08; margin: 0 0 18px;
+  }
+  .hero-role {
+    font-size: 19px; color: var(--sand); opacity: 0.92; margin: 0 0 28px; max-width: 540px;
+  }
+  .hero-gloss {
+    display: inline-flex; gap: 10px; align-items: baseline; flex-wrap: wrap;
+    font-family: 'Fraunces', serif; font-style: italic; font-size: 17px;
+    color: var(--gold); border-left: 2px solid var(--gold); padding-left: 14px;
+    margin-bottom: 32px;
+  }
+  .hero-gloss small {
+    display: block; font-family: 'Source Sans 3', sans-serif; font-style: normal;
+    font-size: 12px; letter-spacing: 0.06em; text-transform: uppercase; color: var(--sand); opacity: 0.75;
+  }
+  .hero-cta { display: flex; gap: 14px; flex-wrap: wrap; }
+  .btn {
+    display: inline-block; padding: 12px 24px; border-radius: 4px;
+    font-weight: 600; font-size: 14.5px; letter-spacing: 0.02em; cursor: pointer;
+    transition: transform 0.15s ease;
+  }
+  .btn:hover { transform: translateY(-1px); text-decoration: none; }
+  .btn-primary { background: var(--clay); color: #fff; }
+  .btn-primary:hover { background: var(--clay-soft); }
+  .btn-ghost { background: transparent; border: 1.5px solid var(--sand); color: var(--sand); }
+  .btn-ghost:hover { background: rgba(255,255,255,0.08); }
+
+  .hero-portrait {
+    border-radius: 6px; overflow: hidden; aspect-ratio: 4/5;
+    box-shadow: 0 24px 60px -20px rgba(0,0,0,0.5);
+    border: 3px solid rgba(217,165,82,0.4);
+  }
+  .hero-portrait img { width: 100%; height: 100%; object-fit: cover; }
+
+  /* ---------- Sections ---------- */
+  section { padding: 76px 0; }
+  section.alt { background: var(--sand); }
+  .section-head { margin-bottom: 40px; max-width: 680px; }
+  .eyebrow {
+    font-size: 13px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase;
+    color: var(--clay); margin-bottom: 10px;
+  }
+  .section-head h2 { font-size: clamp(28px, 3.4vw, 36px); margin: 0 0 14px; }
+  .section-head p.lede { font-size: 17.5px; color: #4a423a; margin: 0; }
+
+  /* About */
+  .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 56px; }
+  .about-grid p { margin: 0 0 18px; color: #332b24; }
+  .advisors {
+    background: #fff; border: 1px solid var(--line); border-radius: 8px; padding: 24px 26px;
+  }
+  .advisors h3 { font-size: 15px; text-transform: uppercase; letter-spacing: 0.06em; margin: 0 0 14px; color: var(--night); }
+  .advisors ul { list-style: none; margin: 0; padding: 0; }
+  .advisors li { padding: 10px 0; border-top: 1px solid var(--line); font-size: 15px; }
+  .advisors li:first-child { border-top: none; }
+  .advisors li b { display: block; color: var(--ink); }
+  .advisors li span { color: #6b5f53; font-size: 13.5px; }
+
+  .timeline { margin-top: 28px; }
+  .tl-item { display: grid; grid-template-columns: 90px 1fr; gap: 18px; padding: 16px 0; border-top: 1px solid var(--line); }
+  .tl-item:first-child { border-top: none; }
+  .tl-year { font-family: 'Fraunces', serif; font-weight: 600; color: var(--clay); font-size: 15px; }
+  .tl-item h4 { margin: 0 0 4px; font-size: 16px; font-family: 'Source Sans 3', sans-serif; font-weight: 700; }
+  .tl-item p { margin: 0; font-size: 14.5px; color: #5a5048; }
+
+  /* Mozambique/Changana */
+  .moz-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: start; }
+  .moz-card {
+    background: var(--night); color: var(--sand); border-radius: 8px; padding: 32px;
+  }
+  .moz-card h3 { color: var(--gold); font-size: 18px; margin: 0 0 14px; }
+  .moz-card p { color: rgba(242,232,216,0.88); font-size: 15.5px; margin: 0 0 14px; }
+  .moz-stats { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 20px; }
+  .moz-stat { border-top: 1px solid rgba(217,165,82,0.3); padding-top: 12px; }
+  .moz-stat strong { display: block; font-family: 'Fraunces', serif; font-size: 22px; color: var(--gold); }
+  .moz-stat span { font-size: 12.5px; color: rgba(242,232,216,0.7); }
+
+  .invite-box {
+    margin-top: 28px; border: 2px solid var(--clay); border-radius: 8px;
+    padding: 26px 28px; background: #fff;
+  }
+  .invite-box h3 { margin: 0 0 10px; font-size: 18px; color: var(--clay); }
+  .invite-box p { margin: 0 0 18px; color: #3a322b; }
+
+  /* Publications */
+  .pub-list { display: flex; flex-direction: column; gap: 18px; }
+  .pub-card {
+    background: #fff; border: 1px solid var(--line); border-radius: 8px;
+    padding: 22px 24px; display: grid; grid-template-columns: 1fr auto; gap: 20px; align-items: center;
+  }
+  .pub-kind {
+    display: inline-block; font-size: 11.5px; font-weight: 700; letter-spacing: 0.06em;
+    text-transform: uppercase; color: var(--night); background: var(--sand-deep);
+    padding: 3px 10px; border-radius: 20px; margin-bottom: 10px;
+  }
+  .pub-card h4 { margin: 0 0 6px; font-size: 17px; font-family: 'Fraunces', serif; font-weight: 600; }
+  .pub-card .meta { font-size: 14px; color: #6b5f53; margin: 0; }
+  .pub-card .btn { white-space: nowrap; }
+  .pub-note { font-size: 12.5px; color: #8a7d6e; margin-top: -6px; }
+
+  /* Talks */
+  .talks-list { list-style: none; margin: 0; padding: 0; }
+  .talks-list li {
+    display: grid; grid-template-columns: 70px 1fr; gap: 18px;
+    padding: 18px 0; border-top: 1px solid var(--line);
+  }
+  .talks-list li:first-child { border-top: none; }
+  .talks-list .year { font-family: 'Fraunces', serif; font-weight: 600; color: var(--clay); }
+  .talks-list h4 { margin: 0 0 4px; font-size: 15.5px; font-weight: 700; }
+  .talks-list p { margin: 0; font-size: 14px; color: #6b5f53; }
+
+  /* Contact */
+  .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; }
+  .contact-card {
+    background: var(--clay); color: #fff; border-radius: 8px; padding: 32px;
+  }
+  .contact-card h3 { color: #fff; margin: 0 0 14px; font-size: 19px; }
+  .contact-card p { color: rgba(255,255,255,0.92); margin: 0 0 22px; }
+  .contact-links { display: flex; flex-direction: column; gap: 12px; }
+  .contact-links a {
+    color: #fff; font-weight: 600; padding: 10px 0; border-bottom: 1px solid rgba(255,255,255,0.25);
+  }
+  .contact-links a:hover { color: var(--sand); text-decoration: none; }
+
+  form.contact-form { display: flex; flex-direction: column; gap: 14px; }
+  form.contact-form label { font-size: 13.5px; font-weight: 700; color: var(--night); }
+  form.contact-form input, form.contact-form textarea, form.contact-form select {
+    padding: 11px 14px; border: 1px solid var(--line); border-radius: 5px;
+    font-family: inherit; font-size: 15px; background: #fff;
+  }
+  form.contact-form button { align-self: flex-start; border: none; }
+
+  footer {
+    background: var(--ink); color: rgba(242,232,216,0.7); padding: 36px 0; font-size: 13.5px;
+  }
+  .footer-inner { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; }
+  footer a { color: var(--gold); }
+
+  [data-i18n] { }
+  html[data-lang="pt"] [data-en-only] { display: none !important; }
+  html[data-lang="en"] [data-pt-only] { display: none !important; }
+
+  @media (max-width: 860px) {
+    nav.links { display: none; }
+    .nav-toggle-mobile { display: block; }
+    .hero-grid { grid-template-columns: 1fr; }
+    .hero-portrait { max-width: 280px; margin: 0 auto; order: -1; }
+    .about-grid, .moz-grid, .contact-grid { grid-template-columns: 1fr; }
+    .pub-card { grid-template-columns: 1fr; }
+    .pub-card .btn { justify-self: start; }
+  }
+
+  nav.links.mobile-open {
+    display: flex; flex-direction: column; position: absolute; top: 100%; left: 0; right: 0;
+    background: var(--paper); padding: 18px 28px; border-bottom: 1px solid var(--line); gap: 16px;
+  }
+</style>
+</head>
+<body>
+
+<header class="site-nav">
+  <div class="nav-inner">
+    <div class="nav-name">Clauâne <span>Carolino</span></div>
+    <nav class="links" id="navLinks">
+      <a href="#about" data-pt="Sobre" data-en="About">Sobre</a>
+      <a href="#research" data-pt="Pesquisa" data-en="Research">Pesquisa</a>
+      <a href="#mozambique" data-pt="Moçambique &amp; Changana" data-en="Mozambique &amp; Changana">Moçambique &amp; Changana</a>
+      <a href="#publications" data-pt="Publicações" data-en="Publications">Publicações</a>
+      <a href="#talks" data-pt="Apresentações" data-en="Talks">Apresentações</a>
+      <a href="#contact" data-pt="Contato" data-en="Contact">Contato</a>
+    </nav>
+    <div class="nav-right">
+      <div class="lang-toggle" id="langToggle">
+        <button type="button" data-set-lang="pt" class="active">PT</button>
+        <button type="button" data-set-lang="en">EN</button>
+      </div>
+      <button class="nav-toggle-mobile" id="mobileToggle" aria-label="Menu">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <div class="hero-eyebrow" data-pt="Doutoranda em Linguística · UFMG" data-en="PhD Candidate in Linguistics · UFMG">Doutoranda em Linguística · UFMG</div>
+      <h1 data-pt="Clauâne Pâmela Leal Dias Carolino" data-en="Clauâne Pâmela Leal Dias Carolino">Clauâne Pâmela Leal Dias Carolino</h1>
+      <p class="hero-role" data-pt="Pesquisadora da língua Changana (Moçambique). Estudo a morfossintaxe da marca de objeto e das construções aplicativas em Changana, no âmbito do Programa de Pós-Graduação em Estudos Linguísticos (POSLIN/UFMG)." data-en="Researcher of the Changana language (Mozambique). I study the morphosyntax of object marking and applicative constructions in Changana, within the Graduate Program in Linguistic Studies (POSLIN/UFMG).">
+        Pesquisadora da língua Changana (Moçambique). Estudo a morfossintaxe da marca de objeto e das construções aplicativas em Changana, no âmbito do Programa de Pós-Graduação em Estudos Linguísticos (POSLIN/UFMG).
+      </p>
+      <div class="hero-gloss">
+        <span>ku tlula<br><small data-pt="atravessar, transpor" data-en="to cross, to pass over">atravessar, transpor</small></span>
+        <span style="color: var(--sand); opacity:.6;">·</span>
+        <span data-pt="changana → português" data-en="Changana → Portuguese" style="font-size:13px; font-style:normal; color: var(--sand); opacity:.75;">changana → português</span>
+      </div>
+      <div class="hero-cta">
+        <a href="#publications" class="btn btn-primary" data-pt="Ver publicações" data-en="View publications">Ver publicações</a>
+        <a href="#mozambique" class="btn btn-ghost" data-pt="Falo Changana → contato" data-en="I speak Changana → contact">Falo Changana → contato</a>
+      </div>
+    </div>
+    <div class="hero-portrait">
+      <img src="images/clauane.jpg" alt="Clauâne Pâmela Leal Dias Carolino">
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow" data-pt="Sobre" data-en="About">Sobre</div>
+      <h2 data-pt="Linguística teórica e descritiva, com foco em línguas bantu" data-en="Theoretical and descriptive linguistics, with a focus on Bantu languages">Linguística teórica e descritiva, com foco em línguas bantu</h2>
+    </div>
+    <div class="about-grid">
+      <div>
+        <p data-pt="Sou doutoranda em Linguística Teórica-Descritiva pelo Programa de Pós-Graduação em Estudos Linguísticos (POSLIN) da Universidade Federal de Minas Gerais (UFMG). Desenvolvo um estudo morfossintático de aspectos relacionados à estrutura verbal da língua bantu Changana, falada em Moçambique." data-en="I am a PhD candidate in Theoretical-Descriptive Linguistics at the Graduate Program in Linguistic Studies (POSLIN) at the Federal University of Minas Gerais (UFMG). I am developing a morphosyntactic study of aspects related to the verbal structure of Changana, a Bantu language spoken in Mozambique.">
+          Sou doutoranda em Linguística Teórica-Descritiva pelo Programa de Pós-Graduação em Estudos Linguísticos (POSLIN) da Universidade Federal de Minas Gerais (UFMG). Desenvolvo um estudo morfossintático de aspectos relacionados à estrutura verbal da língua bantu Changana, falada em Moçambique.
+        </p>
+        <p data-pt="Essa pesquisa se insere no projeto de Descrição, documentação, revitalização e análise teórica de línguas indígenas brasileiras e de línguas africanas, sob orientação do Prof. Dr. Fábio Bonfim Duarte e coorientação do Prof. Dr. David Alberto Seth Langa." data-en="This research is part of the project on the Description, Documentation, Revitalization and Theoretical Analysis of Brazilian Indigenous Languages and African Languages, supervised by Prof. Dr. Fábio Bonfim Duarte and co-supervised by Prof. Dr. David Alberto Seth Langa.">
+          Essa pesquisa se insere no projeto de Descrição, documentação, revitalização e análise teórica de línguas indígenas brasileiras e de línguas africanas, sob orientação do Prof. Dr. Fábio Bonfim Duarte e coorientação do Prof. Dr. David Alberto Seth Langa.
+        </p>
+        <p data-pt="Antes do doutorado, conclui o mestrado em Linguística Teórica e Descritiva (UFMG, 2021–2023), com dissertação sobre o comportamento dos objetos pós-verbais em construções aplicativas do Changana, e a graduação em Letras (UFMG, 2016–2021)." data-en="Before the doctorate, I completed a Master's in Theoretical and Descriptive Linguistics (UFMG, 2021–2023), with a thesis on the behavior of post-verbal objects in Changana applicative constructions, and a Bachelor's in Letras (UFMG, 2016–2021).">
+          Antes do doutorado, conclui o mestrado em Linguística Teórica e Descritiva (UFMG, 2021–2023), com dissertação sobre o comportamento dos objetos pós-verbais em construções aplicativas do Changana, e a graduação em Letras (UFMG, 2016–2021).
+        </p>
+
+        <div class="timeline">
+          <div class="tl-item">
+            <div class="tl-year">2024–</div>
+            <div>
+              <h4 data-pt="Doutorado em Estudos Linguísticos (em andamento)" data-en="PhD in Linguistic Studies (in progress)">Doutorado em Estudos Linguísticos (em andamento)</h4>
+              <p data-pt="UFMG · Tese: Análise formal da marca de objeto em Changana" data-en="UFMG · Dissertation: Formal analysis of object marking in Changana">UFMG · Tese: Análise formal da marca de objeto em Changana</p>
+            </div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-year">2021–2023</div>
+            <div>
+              <h4 data-pt="Mestrado em Linguística Teórica e Descritiva" data-en="Master's in Theoretical and Descriptive Linguistics">Mestrado em Linguística Teórica e Descritiva</h4>
+              <p data-pt="UFMG · O comportamento dos objetos pós-verbais em construções aplicativas do Changana" data-en="UFMG · The behavior of post-verbal objects in Changana applicative constructions">UFMG · O comportamento dos objetos pós-verbais em construções aplicativas do Changana</p>
+            </div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-year">2016–2021</div>
+            <div>
+              <h4 data-pt="Graduação em Letras" data-en="Bachelor's in Letras (Language &amp; Literature)">Graduação em Letras</h4>
+              <p data-pt="Universidade Federal de Minas Gerais (UFMG)" data-en="Federal University of Minas Gerais (UFMG)">Universidade Federal de Minas Gerais (UFMG)</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <div class="advisors">
+          <h3 data-pt="Orientação" data-en="Supervision">Orientação</h3>
+          <ul>
+            <li><b>Prof. Dr. Fábio Bonfim Duarte</b><span data-pt="Orientador · UFMG" data-en="Advisor · UFMG">Orientador · UFMG</span></li>
+            <li><b>Prof. Dr. David Alberto Seth Langa</b><span data-pt="Coorientador · Universidade Eduardo Mondlane" data-en="Co-advisor · Eduardo Mondlane University">Coorientador · Universidade Eduardo Mondlane</span></li>
+          </ul>
+        </div>
+        <div class="advisors" style="margin-top:18px;">
+          <h3 data-pt="Identificadores" data-en="Identifiers">Identificadores</h3>
+          <ul>
+            <li><b>Currículo Lattes</b><span><a href="http://lattes.cnpq.br/7386979152990155" target="_blank" rel="noopener">lattes.cnpq.br/7386979152990155</a></span></li>
+            <li><b>ORCID</b><span><a href="https://orcid.org/0009-0009-4951-3994" target="_blank" rel="noopener">0009-0009-4951-3994</a></span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- RESEARCH -->
+<section class="alt" id="research">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow" data-pt="Pesquisa" data-en="Research">Pesquisa</div>
+      <h2 data-pt="O que eu estudo" data-en="What I study">O que eu estudo</h2>
+      <p class="lede" data-pt="Minha pesquisa investiga, sob uma perspectiva formal, como a língua Changana marca e organiza seus objetos verbais — um fenômeno central para entender a gramática das línguas bantu." data-en="My research investigates, from a formal perspective, how Changana marks and organizes its verbal objects — a phenomenon central to understanding Bantu language grammar.">
+        Minha pesquisa investiga, sob uma perspectiva formal, como a língua Changana marca e organiza seus objetos verbais — um fenômeno central para entender a gramática das línguas bantu.
+      </p>
+    </div>
+
+    <div class="about-grid">
+      <div>
+        <h3 style="font-size:17px; margin:0 0 8px;" data-pt="Marcação de objeto" data-en="Object marking">Marcação de objeto</h3>
+        <p data-pt="No doutorado, desenvolvo uma análise formal da marca de objeto em Changana, sistematizando como o fenômeno se manifesta na língua e contribuindo para a tipologia da marcação de objeto em línguas bantu de modo geral." data-en="In my doctoral research, I develop a formal analysis of object marking in Changana, systematizing how the phenomenon manifests in the language and contributing to the broader typology of object marking in Bantu languages.">
+          No doutorado, desenvolvo uma análise formal da marca de objeto em Changana, sistematizando como o fenômeno se manifesta na língua e contribuindo para a tipologia da marcação de objeto em línguas bantu de modo geral.
+        </p>
+      </div>
+      <div>
+        <h3 style="font-size:17px; margin:0 0 8px;" data-pt="Construções aplicativas" data-en="Applicative constructions">Construções aplicativas</h3>
+        <p data-pt="No mestrado, investiguei o comportamento assimétrico e simétrico dos objetos aplicado e direto em construções aplicativas do Changana, e a derivação sintática envolvida nesse processo." data-en="In my master's research, I investigated the asymmetric and symmetric behavior of applied and direct objects in Changana applicative constructions, and the syntactic derivation involved in this process.">
+          No mestrado, investiguei o comportamento assimétrico e simétrico dos objetos aplicado e direto em construções aplicativas do Changana, e a derivação sintática envolvida nesse processo.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MOZAMBIQUE & CHANGANA -->
+<section id="mozambique">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow" data-pt="Moçambique &amp; Changana" data-en="Mozambique &amp; Changana">Moçambique &amp; Changana</div>
+      <h2 data-pt="Uma língua bantu de Moçambique" data-en="A Bantu language of Mozambique">Uma língua bantu de Moçambique</h2>
+      <p class="lede" data-pt="O Changana (também chamado Xichangana ou Tsonga-Changana) é uma língua bantu falada principalmente nas províncias de Maputo, Gaza e Inhambane, no sul de Moçambique, além de comunidades na África do Sul e no Eswatini." data-en="Changana (also called Xichangana or Tsonga-Changana) is a Bantu language spoken mainly in the provinces of Maputo, Gaza and Inhambane, in southern Mozambique, as well as in communities in South Africa and Eswatini.">
+        O Changana (também chamado Xichangana ou Tsonga-Changana) é uma língua bantu falada principalmente nas províncias de Maputo, Gaza e Inhambane, no sul de Moçambique, além de comunidades na África do Sul e no Eswatini.
+      </p>
+    </div>
+
+    <div class="moz-grid">
+      <div class="moz-card">
+        <h3 data-pt="Por que documentar o Changana?" data-en="Why document Changana?">Por que documentar o Changana?</h3>
+        <p data-pt="Como muitas línguas africanas, o Changana tem uma tradição predominantemente oral e ainda carece de descrições gramaticais detalhadas. Documentar sua morfossintaxe contribui para a preservação da língua, para a formação de pesquisadores moçambicanos e brasileiros, e para a linguística bantu como um todo." data-en="Like many African languages, Changana has a predominantly oral tradition and still lacks detailed grammatical descriptions. Documenting its morphosyntax contributes to language preservation, to training Mozambican and Brazilian researchers, and to Bantu linguistics as a whole.">
+          Como muitas línguas africanas, o Changana tem uma tradição predominantemente oral e ainda carece de descrições gramaticais detalhadas. Documentar sua morfossintaxe contribui para a preservação da língua, para a formação de pesquisadores moçambicanos e brasileiros, e para a linguística bantu como um todo.
+        </p>
+        <div class="moz-stats">
+          <div class="moz-stat">
+            <strong>Niassa–Tsonga</strong>
+            <span data-pt="Família linguística: Bantu (Tsonga)" data-en="Language family: Bantu (Tsonga)">Família linguística: Bantu (Tsonga)</span>
+          </div>
+          <div class="moz-stat">
+            <strong data-pt="Sul de Moçambique" data-en="Southern Mozambique">Sul de Moçambique</strong>
+            <span data-pt="Maputo, Gaza, Inhambane" data-en="Maputo, Gaza, Inhambane">Maputo, Gaza, Inhambane</span>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <p data-pt="Esta pesquisa é desenvolvida em parceria com a Universidade Eduardo Mondlane (Moçambique), por meio da coorientação do Prof. Dr. David Alberto Seth Langa, e se insere em um projeto mais amplo de descrição e documentação de línguas moçambicanas em colaboração entre UFMG e instituições moçambicanas." data-en="This research is carried out in partnership with Eduardo Mondlane University (Mozambique), through the co-supervision of Prof. Dr. David Alberto Seth Langa, and is part of a broader project on the description and documentation of Mozambican languages in collaboration between UFMG and Mozambican institutions.">
+          Esta pesquisa é desenvolvida em parceria com a Universidade Eduardo Mondlane (Moçambique), por meio da coorientação do Prof. Dr. David Alberto Seth Langa, e se insere em um projeto mais amplo de descrição e documentação de línguas moçambicanas em colaboração entre UFMG e instituições moçambicanas.
+        </p>
+
+        <div class="invite-box">
+          <h3 data-pt="Você fala Changana?" data-en="Do you speak Changana?">Você fala Changana?</h3>
+          <p data-pt="Se você é falante de Changana/Xichangana, pesquisador(a), estudante ou tem interesse em colaborar com dados, revisão linguística ou parcerias de pesquisa, eu adoraria ouvir você." data-en="If you speak Changana/Xichangana, are a researcher, a student, or are interested in collaborating with language data, linguistic review, or research partnerships, I would love to hear from you.">
+            Se você é falante de Changana/Xichangana, pesquisador(a), estudante ou tem interesse em colaborar com dados, revisão linguística ou parcerias de pesquisa, eu adoraria ouvir você.
+          </p>
+          <a href="#contact" class="btn btn-primary" data-pt="Entrar em contato" data-en="Get in touch">Entrar em contato</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PUBLICATIONS -->
+<section class="alt" id="publications">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow" data-pt="Publicações" data-en="Publications">Publicações</div>
+      <h2 data-pt="Livros, capítulos e artigos" data-en="Books, chapters &amp; articles">Livros, capítulos e artigos</h2>
+      <p class="lede" data-pt="Os links abaixo levam às páginas oficiais das editoras/periódicos. Estou atualizando esta seção com links diretos de compra e acesso." data-en="The links below lead to the publishers' / journals' official pages. I am updating this section with direct purchase and access links.">
+        Os links abaixo levam às páginas oficiais das editoras/periódicos. Estou atualizando esta seção com links diretos de compra e acesso.
+      </p>
+    </div>
+
+    <div class="pub-list">
+
+      <div class="pub-card">
+        <div>
+          <span class="pub-kind" data-pt="Livro (organização)" data-en="Book (editor)">Livro (organização)</span>
+          <h4>Morfossintaxe de línguas indígenas, de línguas bantu e do português dialetal</h4>
+          <p class="meta">Duarte, F. B.; Lopes, B.; Paula, R.; Mpiuka, D.; Câmara, C.; Nhantumbo, N.; Valias, T.; <b>Carolino, C.</b>; Rocha, B.; Langa, D.; Chauque, L.; Oliveira, M.; Pereira, B. (Orgs.) — 1ª ed. Campinas: Pontes Editores, 2024. 386p.</p>
+        </div>
+        <a class="btn btn-primary" href="https://www.pontesweb.com.br" target="_blank" rel="noopener" data-pt="Ver na editora" data-en="View at publisher">Ver na editora</a>
+      </div>
+
+      <div class="pub-card">
+        <div>
+          <span class="pub-kind" data-pt="Artigo em periódico" data-en="Journal article">Artigo em periódico</span>
+          <h4>Marcação de objeto em bantu: uma sistematização do fenômeno em Changana</h4>
+          <p class="meta"><b>Carolino, C.</b>; Langa, D. — Revista Científica da Universidade Eduardo Mondlane, v. 5, p. 163–180–260, 2025.</p>
+        </div>
+        <a class="btn btn-primary" href="#" target="_blank" rel="noopener" data-pt="Ver periódico" data-en="View journal">Ver periódico</a>
+      </div>
+
+      <div class="pub-card">
+        <div>
+          <span class="pub-kind" data-pt="Capítulo de livro" data-en="Book chapter">Capítulo de livro</span>
+          <h4 data-pt="Aspectos gramaticais da língua Changana" data-en="Grammatical aspects of the Changana language">Aspectos gramaticais da língua Changana</h4>
+          <p class="meta"><b>Carolino, C.</b> In: Duarte, F.; Langa, D.; Valias, T.; Carolino, C. (Orgs.). Morfossintaxe de línguas indígenas, de línguas bantu e do português dialetal. Campinas: Pontes, 2024, p. 7–386.</p>
+        </div>
+        <a class="btn btn-primary" href="https://www.pontesweb.com.br" target="_blank" rel="noopener" data-pt="Ver na editora" data-en="View at publisher">Ver na editora</a>
+      </div>
+
+      <div class="pub-card">
+        <div>
+          <span class="pub-kind" data-pt="Capítulo de livro" data-en="Book chapter">Capítulo de livro</span>
+          <h4 data-pt="As abordagens dos processos de formação de palavras e a implementação deste tema no ensino de língua portuguesa" data-en="Approaches to word-formation processes and their implementation in Portuguese language teaching">As abordagens dos processos de formação de palavras e a implementação deste tema no ensino de língua portuguesa</h4>
+          <p class="meta">Carolino, Clauâne. In: Sartori, A. T. (Org.). Ensino de gramática na escola: sugestões aos professores. São Carlos: Pedro &amp; João Editores, 2020, p. 9–24.</p>
+        </div>
+        <a class="btn btn-primary" href="#" target="_blank" rel="noopener" data-pt="Ver na editora" data-en="View at publisher">Ver na editora</a>
+      </div>
+
+      <div class="pub-card">
+        <div>
+          <span class="pub-kind" data-pt="Livro (coautoria coletiva)" data-en="Book (collective authorship)">Livro (coautoria coletiva)</span>
+          <h4 data-pt="Uma conversa sobre o ensino da gramática na escola: coletânea de atividades" data-en="A conversation about grammar teaching in schools: a collection of activities">Uma conversa sobre o ensino da gramática na escola: coletânea de atividades</h4>
+          <p class="meta">Carolino, Clauâne; et al. — Belo Horizonte: Anya Karina Campos D'Almeida Pinho, 2020, v.1, 81p.</p>
+        </div>
+        <a class="btn btn-primary" href="#" target="_blank" rel="noopener" data-pt="Ver mais" data-en="View more">Ver mais</a>
+      </div>
+
+    </div>
+    <p class="pub-note" data-pt="* Links serão atualizados conforme disponibilidade nas páginas das editoras/periódicos." data-en="* Links will be updated as they become available on publisher/journal pages.">* Links serão atualizados conforme disponibilidade nas páginas das editoras/periódicos.</p>
+  </div>
+</section>
+
+<!-- TALKS -->
+<section id="talks">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow" data-pt="Apresentações" data-en="Talks">Apresentações</div>
+      <h2 data-pt="Congressos, conferências e seminários" data-en="Conferences, talks &amp; seminars">Congressos, conferências e seminários</h2>
+    </div>
+
+    <ul class="talks-list">
+      <li>
+        <div class="year">2025</div>
+        <div>
+          <h4>The syntax of the post-verbal objects in Changana applicative constructions</h4>
+          <p data-pt="Com Fábio Bonfim Duarte · Apresentação de trabalho/Congresso" data-en="With Fábio Bonfim Duarte · Conference paper">Com Fábio Bonfim Duarte · Apresentação de trabalho/Congresso</p>
+        </div>
+      </li>
+      <li>
+        <div class="year">2025</div>
+        <div>
+          <h4 data-pt="A morfossintaxe da marca de objeto em Xichangana" data-en="The morphosyntax of object marking in Xichangana">A morfossintaxe da marca de objeto em Xichangana</h4>
+          <p data-pt="Apresentação de trabalho/Congresso" data-en="Conference paper">Apresentação de trabalho/Congresso</p>
+        </div>
+      </li>
+      <li>
+        <div class="year">2024</div>
+        <div>
+          <h4>The syntax of the post verbal objects in Xichangana applicative constructions</h4>
+          <p data-pt="Com Fábio Bonfim Duarte · Conferência ou palestra" data-en="With Fábio Bonfim Duarte · Invited talk">Com Fábio Bonfim Duarte · Conferência ou palestra</p>
+        </div>
+      </li>
+      <li>
+        <div class="year">2024</div>
+        <div>
+          <h4 data-pt="Descrição da marca de objeto em Xichangana" data-en="Description of object marking in Xichangana">Descrição da marca de objeto em Xichangana</h4>
+          <p data-pt="Conferência ou palestra" data-en="Invited talk">Conferência ou palestra</p>
+        </div>
+      </li>
+      <li>
+        <div class="year">2022</div>
+        <div>
+          <h4 data-pt="O comportamento dos objetos pós-verbais em construções aplicativas do Changana" data-en="The behavior of post-verbal objects in Changana applicative constructions">O comportamento dos objetos pós-verbais em construções aplicativas do Changana</h4>
+          <p data-pt="Com Fábio Bonfim Duarte · Seminário" data-en="With Fábio Bonfim Duarte · Seminar">Com Fábio Bonfim Duarte · Seminário</p>
+        </div>
+      </li>
+      <li>
+        <div class="year">2021</div>
+        <div>
+          <h4 data-pt="Aplicativização em línguas bantu: as propriedades sintático-semânticas do objeto aplicado" data-en="Applicativization in Bantu languages: syntactic-semantic properties of the applied object">Aplicativização em línguas bantu: as propriedades sintático-semânticas do objeto aplicado</h4>
+          <p data-pt="Com Fábio Bonfim Duarte · Congresso" data-en="With Fábio Bonfim Duarte · Conference">Com Fábio Bonfim Duarte · Congresso</p>
+        </div>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="alt" id="contact">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow" data-pt="Contato" data-en="Contact">Contato</div>
+      <h2 data-pt="Vamos conversar" data-en="Let's talk">Vamos conversar</h2>
+      <p class="lede" data-pt="Para colaborações de pesquisa, convites acadêmicos, dúvidas sobre Changana ou apenas para dizer olá — entre em contato." data-en="For research collaborations, academic invitations, questions about Changana, or just to say hello — get in touch.">
+        Para colaborações de pesquisa, convites acadêmicos, dúvidas sobre Changana ou apenas para dizer olá — entre em contato.
+      </p>
+    </div>
+
+    <div class="contact-grid">
+      <div class="contact-card">
+        <h3 data-pt="Contato direto" data-en="Direct contact">Contato direto</h3>
+        <p data-pt="Resposta em até alguns dias úteis." data-en="Response within a few business days.">Resposta em até alguns dias úteis.</p>
+        <div class="contact-links">
+          <a href="mailto:clauane.carolino@exemplo.com">clauane.carolino@exemplo.com</a>
+          <a href="http://lattes.cnpq.br/7386979152990155" target="_blank" rel="noopener">Currículo Lattes</a>
+          <a href="https://orcid.org/0009-0009-4951-3994" target="_blank" rel="noopener">ORCID</a>
+        </div>
+      </div>
+
+      <form class="contact-form" action="https://formspree.io/f/yourFormId" method="POST">
+        <label for="name" data-pt="Nome" data-en="Name">Nome</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email" data-pt="E-mail" data-en="Email">E-mail</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="topic" data-pt="Motivo do contato" data-en="Reason for contact">Motivo do contato</label>
+        <select id="topic" name="topic">
+          <option data-pt="Sou falante de Changana" data-en="I speak Changana">Sou falante de Changana</option>
+          <option data-pt="Colaboração de pesquisa" data-en="Research collaboration">Colaboração de pesquisa</option>
+          <option data-pt="Convite acadêmico" data-en="Academic invitation">Convite acadêmico</option>
+          <option data-pt="Outro" data-en="Other">Outro</option>
+        </select>
+
+        <label for="message" data-pt="Mensagem" data-en="Message">Mensagem</label>
+        <textarea id="message" name="message" rows="4" required></textarea>
+
+        <button type="submit" class="btn btn-primary" data-pt="Enviar mensagem" data-en="Send message">Enviar mensagem</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap footer-inner">
+    <div data-pt="© 2026 Clauâne Carolino. Todos os direitos reservados." data-en="© 2026 Clauâne Carolino. All rights reserved.">© 2026 Clauâne Carolino. Todos os direitos reservados.</div>
+    <div>
+      <a href="http://lattes.cnpq.br/7386979152990155" target="_blank" rel="noopener">Lattes</a> ·
+      <a href="https://orcid.org/0009-0009-4951-3994" target="_blank" rel="noopener">ORCID</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // Language toggle
+  function setLang(lang) {
+    document.documentElement.setAttribute('data-lang', lang);
+    document.documentElement.setAttribute('lang', lang === 'pt' ? 'pt-BR' : 'en');
+    document.querySelectorAll('[data-pt][data-en]').forEach(function(el) {
+      var val = lang === 'pt' ? el.getAttribute('data-pt') : el.getAttribute('data-en');
+      if (val !== null) el.innerHTML = val;
+    });
+    document.querySelectorAll('#langToggle button').forEach(function(btn) {
+      btn.classList.toggle('active', btn.getAttribute('data-set-lang') === lang);
+    });
+    localStorage.setItem('site-lang', lang);
+  }
+
+  document.querySelectorAll('#langToggle button').forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      setLang(btn.getAttribute('data-set-lang'));
+    });
+  });
+
+  // Restore saved preference (falls back to pt)
+  var saved = null;
+  try { saved = localStorage.getItem('site-lang'); } catch(e) {}
+  if (saved === 'en') setLang('en');
+
+  // Mobile nav toggle
+  var mobileToggle = document.getElementById('mobileToggle');
+  var navLinks = document.getElementById('navLinks');
+  mobileToggle.addEventListener('click', function() {
+    navLinks.classList.toggle('mobile-open');
+  });
+  navLinks.querySelectorAll('a').forEach(function(a) {
+    a.addEventListener('click', function() { navLinks.classList.remove('mobile-open'); });
+  });
+</script>
+
+</body>
+</html>
